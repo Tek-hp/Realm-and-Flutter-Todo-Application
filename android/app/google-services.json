@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "573773565587",
+    "project_id": "realm-todo-demo",
+    "storage_bucket": "realm-todo-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573773565587:android:161e89df842069661a0766",
+        "android_client_info": {
+          "package_name": "com.example.todorealm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573773565587-2qidgmirtdrbvdfgtjude5d1nkaifu24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.todorealm",
+            "certificate_hash": "02f76849fa3bb7dcb7613434af6aa4bf03ddf005"
+          }
+        },
+        {
+          "client_id": "573773565587-ai83521ijkq4c9c1kg2f45g1rvedufhp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAoAVmjOGIQvq3V_9ltupsbzkAfOxlBd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573773565587-ai83521ijkq4c9c1kg2f45g1rvedufhp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
