@@ -9,4 +9,12 @@ abstract class TodoState extends Equatable {
   List<Object> get props => [loading];
 }
 
-class TodoInitial extends TodoState {}
+class TodoInitialState extends TodoState {}
+
+class TodoAddInitialState extends TodoState {}
+
+class TodoAddSuccessState extends TodoState {}
+
+class TodoLoadingState extends TodoState {}
+
+class TodoFailureState extends TodoState {}
