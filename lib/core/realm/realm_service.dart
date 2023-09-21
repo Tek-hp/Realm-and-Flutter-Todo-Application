@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:realm/realm.dart';
 import 'package:todorealm/core/google/google_auth_service.dart';
 

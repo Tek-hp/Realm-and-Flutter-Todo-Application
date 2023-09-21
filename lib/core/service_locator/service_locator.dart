@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:get_it/get_it.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:todorealm/core/google/google_auth_service.dart';
 import 'package:todorealm/core/realm/realm_service.dart';
 import 'package:todorealm/features/authentication/data/repositories/google_user_repository.dart';

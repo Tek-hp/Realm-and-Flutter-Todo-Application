@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:todorealm/core/realm/realm_service.dart';
 import 'package:todorealm/features/authentication/presentation/bloc/authentication_bloc.dart';
 import 'package:todorealm/core/service_locator/service_locator.dart' as service_locator;
 import 'package:todorealm/features/authentication/presentation/pages/login_page.dart';
