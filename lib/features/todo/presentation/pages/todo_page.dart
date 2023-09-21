@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todorealm/features/todo/presentation/widgets/todo_list.dart';
 
 class TodoPage extends StatefulWidget {
   const TodoPage({super.key});
@@ -15,6 +16,7 @@ class _TodoPageState extends State<TodoPage> {
         title: const Text('My Todos'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
+      body: const TodoListWidget(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         mini: true,
