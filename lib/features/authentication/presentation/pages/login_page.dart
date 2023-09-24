@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:todorealm/core/service_locator/service_locator.dart';
 import 'package:todorealm/features/authentication/presentation/bloc/authentication_bloc.dart';
 import 'package:todorealm/features/todo/presentation/pages/todo_page.dart';
 

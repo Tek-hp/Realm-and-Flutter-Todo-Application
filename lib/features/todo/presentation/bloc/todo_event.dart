@@ -7,14 +7,6 @@ abstract class TodoEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class ShowAddDialogEvent extends TodoEvent {}
-
-class ShowUpdateDialogEvent extends TodoEvent {
-  final TodoRealmModel todo;
-
-  const ShowUpdateDialogEvent(this.todo);
-}
-
 class AddTodoEvent extends TodoEvent {
   final TodoRealmModel todo;
 
@@ -22,8 +14,6 @@ class AddTodoEvent extends TodoEvent {
 }
 
 class ReadTodoEvent extends TodoEvent {}
-
-class CancleUpdateTodoEvent extends TodoEvent {}
 
 class UpdateTodoEvent extends TodoEvent {
   final TodoRealmModel todo;

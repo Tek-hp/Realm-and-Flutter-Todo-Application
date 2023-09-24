@@ -2,8 +2,6 @@ import 'dart:developer';
 
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:realm/realm.dart';
-import 'package:todorealm/core/realm/realm_service.dart';
 
 abstract class GoogleUserSource {
   Future<GoogleSignInAccount?> signInUser();
@@ -11,11 +9,8 @@ abstract class GoogleUserSource {
 }
 
 class GoogleUserSourceImpl implements GoogleUserSource {
-  GoogleUserSourceImpl(RealmService realmService)
-      : _googleSignIn = GoogleSignIn(),
-        _realmService = realmService;
+  GoogleUserSourceImpl() : _googleSignIn = GoogleSignIn();
 
-  late final RealmService _realmService;
   late final GoogleSignIn _googleSignIn;
 
   @override

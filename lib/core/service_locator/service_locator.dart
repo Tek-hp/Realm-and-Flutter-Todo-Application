@@ -1,8 +1,6 @@
 import 'dart:developer';
 
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_it/get_it.dart';
-import 'package:realm/realm.dart';
 import 'package:todorealm/core/google/google_auth_service.dart';
 import 'package:todorealm/core/realm/realm_service.dart';
 import 'package:todorealm/features/authentication/data/repositories/google_user_repository.dart';
@@ -20,12 +18,8 @@ final locator = GetIt.instance;
 Future<void> initialize() async {
   //================Services
   locator.registerLazySingleton(() => GoogleAuthService());
-  final app = App(AppConfiguration(dotenv.env['APPLICATION_ID']!));
-  final user = await app.logIn(Credentials.anonymous());
 
   locator.registerLazySingleton(() => RealmService());
-
-  log('message');
 
   //=================Remote-Spurces
   locator.registerFactory(() => TodoRemoteSource(locator()));

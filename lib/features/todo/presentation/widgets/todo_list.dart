@@ -5,11 +5,14 @@ import 'package:todorealm/features/todo/presentation/bloc/todo_bloc.dart';
 import 'package:todorealm/features/todo/presentation/widgets/todo_tile.dart';
 
 class TodoListWidget extends StatelessWidget {
-  const TodoListWidget({super.key});
+  const TodoListWidget({super.key, required this.onEditPressed});
+
+  final void Function(TodoRealmModel) onEditPressed;
 
   @override
   Widget build(BuildContext context) {
     List<TodoRealmModel> data = [];
+
     return BlocConsumer<TodoBloc, TodoState>(
       listener: (context, state) {
         if (state is TodoSuccessState) {
@@ -59,6 +62,7 @@ class TodoListWidget extends StatelessWidget {
                               data[index].summary,
                               data[index].isComplete,
                             ),
+                            onEditPressed: onEditPressed,
                           );
                   },
                 ),

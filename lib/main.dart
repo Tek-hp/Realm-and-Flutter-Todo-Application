@@ -5,8 +5,8 @@ import 'package:oktoast/oktoast.dart';
 import 'package:todorealm/core/realm/realm_service.dart';
 import 'package:todorealm/features/authentication/presentation/bloc/authentication_bloc.dart';
 import 'package:todorealm/core/service_locator/service_locator.dart' as service_locator;
+import 'package:todorealm/features/authentication/presentation/pages/login_page.dart';
 import 'package:todorealm/features/todo/presentation/bloc/todo_bloc.dart';
-import 'package:todorealm/features/todo/presentation/pages/todo_page.dart';
 
 Future<void> main() async {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const TodoPage(),
+          home: const LoginPage(),
         ),
       ),
     );

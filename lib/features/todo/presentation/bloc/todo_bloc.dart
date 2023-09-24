@@ -17,12 +17,9 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
     this._readTodoUseCase,
   ) : super(TodoInitialState()) {
     on<ReadTodoEvent>(_readItemsInitially);
-    on<ShowAddDialogEvent>(_showTodoAddDialog);
-    on<ShowUpdateDialogEvent>(_showTodoUpdateDialog);
     on<AddTodoEvent>(_addTodo);
     on<UpdateTodoEvent>(_updateTodo);
     on<DeleteTodoEvent>(_deleteTodo);
-    on<CancleUpdateTodoEvent>(_resetState);
     on((event, emit) => null);
   }
 
@@ -30,18 +27,6 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
   final UpdateTodoUseCase _updateTodoUseCase;
   final DeleteTodoUseCase _deleteTodoUseCase;
   final ReadTodoUseCase _readTodoUseCase;
-
-  void _resetState(CancleUpdateTodoEvent event, Emitter<TodoState> emit) {
-    emit(const TodoSuccessState().copyWith());
-  }
-
-  Future<void> _showTodoUpdateDialog(ShowUpdateDialogEvent event, Emitter<TodoState> emit) async {
-    emit(UpdateTodoState(event.todo));
-  }
-
-  Future<void> _showTodoAddDialog(ShowAddDialogEvent event, Emitter<TodoState> emit) async {
-    emit(AddTodoState());
-  }
 
   void _readItemsInitially(ReadTodoEvent event, Emitter<TodoState> emit) {
     emit(const TodoLoadingState(loadingMessage: 'Fetching your list'));

@@ -1,12 +1,10 @@
 part of 'todo_bloc.dart';
 
 abstract class TodoState extends Equatable {
-  const TodoState({this.loading = false});
-
-  final bool loading;
+  const TodoState();
 
   @override
-  List<Object> get props => [loading];
+  List<Object> get props => [];
 }
 
 class TodoInitialState extends TodoState {}
@@ -26,14 +24,6 @@ class TodoSuccessState extends TodoState {
     );
   }
 }
-
-class UpdateTodoState extends TodoState {
-  final TodoRealmModel todo;
-
-  const UpdateTodoState(this.todo);
-}
-
-class DeleteTodoState extends TodoState {}
 
 class TodoLoadingState extends TodoState {
   final String loadingMessage;

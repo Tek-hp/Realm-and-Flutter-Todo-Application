@@ -6,9 +6,10 @@ import 'package:todorealm/features/todo/presentation/bloc/todo_bloc.dart';
 enum MenuOption { edit, delete }
 
 class TodoTile extends StatelessWidget {
-  const TodoTile({super.key, required this.todoItem});
+  const TodoTile({super.key, required this.todoItem, required this.onEditPressed});
 
   final TodoRealmModel todoItem;
+  final void Function(TodoRealmModel) onEditPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class TodoTile extends StatelessWidget {
                 return;
               }
 
-              BlocProvider.of<TodoBloc>(context).add(ShowUpdateDialogEvent(todoItem));
+              onEditPressed(todoItem);
             },
             itemBuilder: (context) => [
               const PopupMenuItem<MenuOption>(
