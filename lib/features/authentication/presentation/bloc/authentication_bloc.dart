@@ -26,7 +26,10 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> 
 
     final response = await _signInUseCase.call(null);
     response.fold(
-      (error) => AuthenticationFailureState(error),
+      (error) {
+        AuthenticationFailureState(error);
+        log(error);
+      },
       (success) {
         log(success.toString());
         emit(

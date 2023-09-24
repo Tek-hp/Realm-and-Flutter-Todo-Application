@@ -7,8 +7,34 @@ abstract class TodoEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class AddTodo extends TodoEvent {}
+class ShowAddDialogEvent extends TodoEvent {}
 
-class UpdateTodo extends TodoEvent {}
+class ShowUpdateDialogEvent extends TodoEvent {
+  final TodoRealmModel todo;
 
-class DeleteTodo extends TodoEvent {}
+  const ShowUpdateDialogEvent(this.todo);
+}
+
+class AddTodoEvent extends TodoEvent {
+  final TodoRealmModel todo;
+
+  const AddTodoEvent(this.todo);
+}
+
+class ReadTodoEvent extends TodoEvent {}
+
+class CancleUpdateTodoEvent extends TodoEvent {}
+
+class UpdateTodoEvent extends TodoEvent {
+  final TodoRealmModel todo;
+
+  UpdateTodoEvent(this.todo) {
+    log('Yoooooooooooo -- ${todo.getSTringValue()}');
+  }
+}
+
+class DeleteTodoEvent extends TodoEvent {
+  final TodoRealmModel todo;
+
+  const DeleteTodoEvent(this.todo);
+}

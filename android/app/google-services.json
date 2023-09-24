@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "573773565587",
-    "project_id": "realm-todo-demo",
-    "storage_bucket": "realm-todo-demo.appspot.com"
+    "project_number": "749056000168",
+    "project_id": "todo-realm",
+    "storage_bucket": "todo-realm.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:573773565587:android:161e89df842069661a0766",
+        "mobilesdk_app_id": "1:749056000168:android:30795f6cee60a259cb829d",
         "android_client_info": {
           "package_name": "com.example.todorealm"
         }
       },
       "oauth_client": [
         {
-          "client_id": "573773565587-2qidgmirtdrbvdfgtjude5d1nkaifu24.apps.googleusercontent.com",
+          "client_id": "749056000168-fe6ovv1q65f7gk807uf49u41b6q5jkj8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.todorealm",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "573773565587-ai83521ijkq4c9c1kg2f45g1rvedufhp.apps.googleusercontent.com",
+          "client_id": "749056000168-78r4kh8ctei307ubge268i7omul6o8a7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBAoAVmjOGIQvq3V_9ltupsbzkAfOxlBd4"
+          "current_key": "AIzaSyBgF_RmMrMQEJ3Ln92k3Pbgi1KS78DTo6A"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "573773565587-ai83521ijkq4c9c1kg2f45g1rvedufhp.apps.googleusercontent.com",
+              "client_id": "749056000168-78r4kh8ctei307ubge268i7omul6o8a7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

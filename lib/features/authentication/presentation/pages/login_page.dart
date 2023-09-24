@@ -47,9 +47,6 @@ class _LoginPageState extends State<LoginPage> {
                         height: 10,
                       ),
                       GestureDetector(
-                        onLongPress: () {
-                          locator<AuthenticationBloc>().add(GoogleSignOutEvent());
-                        },
                         onTap: () {
                           BlocProvider.of<AuthenticationBloc>(context).add(GoogleSignInEvent());
                         },

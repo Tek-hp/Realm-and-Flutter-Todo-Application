@@ -1,5 +1,9 @@
+import 'package:realm/realm.dart';
+import 'package:todorealm/features/todo/data/models/realm/todo_realm_model.dart';
+
 abstract class TodoRepository {
-  Future<void> createTodo();
-  Future<void> updateTodo();
-  Future<void> deleteTodo();
+  RealmResults<TodoRealmModel> readTodo();
+  void addTodo(TodoRealmModel todo);
+  void updateTodo(TodoRealmModel todo);
+  void deleteTodo(TodoRealmModel todo);
 }

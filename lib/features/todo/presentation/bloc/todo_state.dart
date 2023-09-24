@@ -11,10 +11,45 @@ abstract class TodoState extends Equatable {
 
 class TodoInitialState extends TodoState {}
 
-class TodoAddInitialState extends TodoState {}
+class AddTodoState extends TodoState {}
 
-class TodoAddSuccessState extends TodoState {}
+class TodoSuccessState extends TodoState {
+  final TodoSuccessType? successType;
+  final List<TodoRealmModel>? data;
 
-class TodoLoadingState extends TodoState {}
+  const TodoSuccessState({this.successType, this.data = const []});
 
-class TodoFailureState extends TodoState {}
+  TodoSuccessState copyWith({TodoSuccessType? successType, List<TodoRealmModel>? data}) {
+    return TodoSuccessState(
+      successType: successType ?? this.successType,
+      data: data ?? this.data,
+    );
+  }
+}
+
+class UpdateTodoState extends TodoState {
+  final TodoRealmModel todo;
+
+  const UpdateTodoState(this.todo);
+}
+
+class DeleteTodoState extends TodoState {}
+
+class TodoLoadingState extends TodoState {
+  final String loadingMessage;
+
+  const TodoLoadingState({required this.loadingMessage});
+}
+
+class TodoFailureState extends TodoState {
+  final String errorMessage;
+
+  const TodoFailureState({required this.errorMessage});
+}
+
+enum TodoSuccessType {
+  read,
+  add,
+  update,
+  delete,
+}
